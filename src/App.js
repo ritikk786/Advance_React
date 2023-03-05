@@ -24,15 +24,15 @@ function App() {
       date: new Date(2021, 5, 12),
     },
   ];
-  
+  const LocationOfExpenditure ='pathankot'
   return (
     <header className='App-heade'>
     <h2>Expense tracker</h2>
     
-    <ExpenseItem expense={expenses[0]} ></ExpenseItem>
-    <ExpenseItem expense={expenses[1]} ></ExpenseItem>
-    <ExpenseItem expense={expenses[2]} ></ExpenseItem>
-    <ExpenseItem expense={expenses[3]} ></ExpenseItem>
+    <ExpenseItem expense={expenses[0]} place={LocationOfExpenditure}></ExpenseItem>
+    <ExpenseItem expense={expenses[1]} place={LocationOfExpenditure}></ExpenseItem>
+    <ExpenseItem expense={expenses[2]} place={LocationOfExpenditure} ></ExpenseItem>
+    <ExpenseItem expense={expenses[3]} place={LocationOfExpenditure}></ExpenseItem>
     </header>
   );
 }
