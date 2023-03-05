@@ -1,8 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
-import ExpenseItem from './componenets/ExpenseItem.js';
+import './componenets/Expenses/Expenses.css'
+import ExpenseItem from './componenets/Expenses/ExpenseItem.js';
+import './componenets/UI/card.css'
+import Card from './componenets/UI/Card';
 
-function App() {
+const App=()=> {
   const expenses = [
     {
       id: 'e1',
@@ -25,14 +28,22 @@ function App() {
     },
   ];
   const LocationOfExpenditure ='pathankot'
+  for(let i=0;i<expenses.length;i++){
+
+  }
   return (
-    <header className='App-heade'>
+    <header className='container'>
     <h2>Expense tracker</h2>
-    
-    <ExpenseItem expense={expenses[0]} place={LocationOfExpenditure}></ExpenseItem>
+    <Card className='expenses'>
+    {/* <ExpenseItem expense={expenses[0]} place={LocationOfExpenditure}></ExpenseItem>
     <ExpenseItem expense={expenses[1]} place={LocationOfExpenditure}></ExpenseItem>
     <ExpenseItem expense={expenses[2]} place={LocationOfExpenditure} ></ExpenseItem>
-    <ExpenseItem expense={expenses[3]} place={LocationOfExpenditure}></ExpenseItem>
+    <ExpenseItem expense={expenses[3]} place={LocationOfExpenditure}></ExpenseItem> */}
+    {expenses.map(value=>(
+  
+      <ExpenseItem expense={value} key={value.id} place={LocationOfExpenditure}></ExpenseItem>
+    ))}
+    </Card>
     </header>
   );
 }
