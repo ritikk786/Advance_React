@@ -6,9 +6,11 @@ const ExpenseDetail= (props)=>{
     const clickhandler = ()=>{
         console.log('clicked')
     }
-    const deletehandler =()=>{
 
+    const deletehandler = (e)=>{
+        e.target.parentNode.parentNode.remove()
     }
+
 return(
 <div className='expense-item__description'>
 

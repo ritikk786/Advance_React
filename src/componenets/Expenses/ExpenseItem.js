@@ -13,7 +13,8 @@ const ExpenseItem=(props)=> {
                 <ExpenseDate date={props.expense.date} />
             </div>
             
-            <ExpenseDetail detail={props.expense} place={props.place} />
+            <ExpenseDetail detail={props.expense}  place={props.place} />
+           
 
         </Card>
 
