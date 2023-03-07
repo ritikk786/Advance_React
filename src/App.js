@@ -4,7 +4,7 @@ import './componenets/Expenses/Expenses.css'
 import ExpenseItem from './componenets/Expenses/ExpenseItem.js';
 import './componenets/UI/card.css'
 import Card from './componenets/UI/Card';
-
+import NewExpenses from './componenets/NewExpenses/NewExpenses';
 const App=()=> {
   const expenses = [
     {
@@ -34,6 +34,7 @@ const App=()=> {
   return (
     <header className='container'>
     <h2>Expense tracker</h2>
+      <NewExpenses/>
     <Card className='expenses'>
     {/* <ExpenseItem expense={expenses[0]} place={LocationOfExpenditure}></ExpenseItem>
     <ExpenseItem expense={expenses[1]} place={LocationOfExpenditure}></ExpenseItem>
