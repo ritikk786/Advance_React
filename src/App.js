@@ -5,6 +5,7 @@ import ExpenseItem from './componenets/Expenses/ExpenseItem.js';
 import './componenets/UI/card.css'
 import Card from './componenets/UI/Card';
 import NewExpenses from './componenets/NewExpenses/NewExpenses';
+import ExpenseFilter from './componenets/Expenses/ExpenseFilter';
 import { useState } from 'react'
 
 
@@ -49,13 +50,12 @@ const App=()=> {
 
   return (
     <header className='container'>
-    <h2>Expense tracker</h2>
+    
       <NewExpenses addExpense={addExpensedata}/>
+      
     <Card className='expenses'>
-    {/* <ExpenseItem expense={expenses[0]} place={LocationOfExpenditure}></ExpenseItem>
-    <ExpenseItem expense={expenses[1]} place={LocationOfExpenditure}></ExpenseItem>
-    <ExpenseItem expense={expenses[2]} place={LocationOfExpenditure} ></ExpenseItem>
-    <ExpenseItem expense={expenses[3]} place={LocationOfExpenditure}></ExpenseItem> */}
+    
+    <ExpenseFilter/>
     {expenses.map(value=>(
   
       <ExpenseItem expense={value} key={value.id} place={LocationOfExpenditure}></ExpenseItem>

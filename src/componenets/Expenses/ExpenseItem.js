@@ -8,7 +8,7 @@ const ExpenseItem=(props)=> {
 
     return (
         <Card className="expense-item">
-
+          
             <div >
                 <ExpenseDate date={props.expense.date} />
             </div>
