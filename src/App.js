@@ -41,10 +41,11 @@ const App=()=> {
       date : data.date
     }
     console.log(newExpense)
-    setexpenses([
-      ...expenses,
-      newExpense
-    ])
+    // setexpenses([...expenses,newExpense])
+
+    setexpenses((previousExpense)=>{
+        return ([...expenses,newExpense])
+    })
     console.log(expenses)
   }
 
@@ -52,7 +53,7 @@ const App=()=> {
     <header className='container'>
     
       <NewExpenses addExpense={addExpensedata}/>
-      
+
     <Card className='expenses'>
     
     <ExpenseFilter/>
