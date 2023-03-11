@@ -4,8 +4,14 @@ import ExpenseDetail from './ExpenseDetail.js';
 import Card from '../UI/Card.js'
 
 
-const ExpenseItem=(props)=> {
 
+const ExpenseItem=(props)=> {
+    const filterdExpense=(year)=>{
+        console.log(year)
+        
+    
+      }
+// console.log(props.expense)
     return (
         <Card className="expense-item">
           

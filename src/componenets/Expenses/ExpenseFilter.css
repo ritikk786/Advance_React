@@ -1,0 +1,16 @@
+.label{
+    color:white;
+    font-weight: 500;
+
+}
+.select {
+    float: right;
+    padding: 2px;
+    width: 100px;
+    text-align: center;
+    font-weight: 900;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    
+   
+}

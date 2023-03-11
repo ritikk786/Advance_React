@@ -3,10 +3,10 @@ import './App.css';
 import './componenets/Expenses/Expenses.css'
 import ExpenseItem from './componenets/Expenses/ExpenseItem.js';
 import './componenets/UI/card.css'
-import Card from './componenets/UI/Card';
 import NewExpenses from './componenets/NewExpenses/NewExpenses';
 import ExpenseFilter from './componenets/Expenses/ExpenseFilter';
 import { useState } from 'react'
+import Expenses from './componenets/Expenses/Expenses';
 
 
 const App=()=> {
@@ -40,28 +40,21 @@ const App=()=> {
       amount : data.amount,
       date : data.date
     }
-    console.log(newExpense)
+    // console.log(newExpense)
     // setexpenses([...expenses,newExpense])
 
     setexpenses((previousExpense)=>{
         return ([...expenses,newExpense])
-    })
-    console.log(expenses)
+      })
+      // console.log([...expenses,newExpense])
   }
-
+  
   return (
     <header className='container'>
     
       <NewExpenses addExpense={addExpensedata}/>
-
-    <Card className='expenses'>
+      <Expenses expenses={expenses} LocationOfExpenditure={LocationOfExpenditure}/>
     
-    <ExpenseFilter/>
-    {expenses.map(value=>(
-  
-      <ExpenseItem expense={value} key={value.id} place={LocationOfExpenditure}></ExpenseItem>
-    ))}
-    </Card>
     </header>
   );
 }
