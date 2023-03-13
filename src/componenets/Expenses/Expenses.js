@@ -4,6 +4,7 @@ import './Expenses.css'
 import ExpenseFilter from './ExpenseFilter';
 import ExpenseItem from './ExpenseItem.js';
 import { useState } from "react"
+import ExpensesList from './ExpensesList';
 
 
 
@@ -23,11 +24,10 @@ const Expenses=(props)=>{
     return(
         <Card className='expenses'>
     
-    <ExpenseFilter filter={filterdExpense}/>
-    {filterdexpense.map(value=>(
-  
-      <ExpenseItem expense={value} key={value.id} place={props.LocationOfExpenditure}></ExpenseItem>
-    ))}
+    <ExpenseFilter filter={filterdExpense} value={filteredYear}/>
+      <ExpensesList items={filterdexpense} place={props.LocationOfExpenditure}></ExpensesList>
+    
+   
     </Card>
     )
 }

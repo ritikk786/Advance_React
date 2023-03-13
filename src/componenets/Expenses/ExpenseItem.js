@@ -6,6 +6,8 @@ import Card from '../UI/Card.js'
 
 
 const ExpenseItem=(props)=> {
+    console.log(props.place)
+    
     const filterdExpense=(year)=>{
         console.log(year)
         
@@ -13,6 +15,7 @@ const ExpenseItem=(props)=> {
       }
 // console.log(props.expense)
     return (
+        <li>
         <Card className="expense-item">
           
             <div >
@@ -23,6 +26,7 @@ const ExpenseItem=(props)=> {
            
 
         </Card>
+        </li>
 
     );
 }
