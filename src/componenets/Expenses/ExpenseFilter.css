@@ -11,6 +11,9 @@
     font-weight: 900;
     border-radius: 0.3rem;
     cursor: pointer;
+    margin-bottom: 2px;
     
-   
+}
+.div{
+    /* clear:both */
 }

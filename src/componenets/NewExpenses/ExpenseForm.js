@@ -31,6 +31,7 @@ const ExpenseForm =(props)=>{
         setenteredtitle('')
         setenteredAmount('')
         setenteredDate('')
+       
     }
     return (
         <form onSubmit={printdetailhandler}>
@@ -48,6 +49,7 @@ const ExpenseForm =(props)=>{
                     <input type='date' min='2019-01-01' max='2022-12-31' value={enteredDate} onChange={datechangehandler}/>
                 </div>
                 <div className='new-expense__actions'>
+                    <button type='button' onClick={props.exitfun}>Cancel</button>
                     <button type='submit'>Add</button>
                 </div>
             </div>
